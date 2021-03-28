@@ -1,0 +1,34 @@
+
+Notes Tangible Devices 2021
+==============================
+
+1. Connect interfaces to USB and to power
+2. Run python3 scripts for the interfaces (check /dev address)
+3. Run SuperCollider main-entry file
+
+
+
+
+
+Python scripts for the communication with Devices <--> SuperCollider
+
+
+First run scripts:
+
+python3 tangible_pins.py
+python3 tangible_wheel.py
+python3 tangible_envelope.py
+
+
+The address can change in /dev/ e.g. cu.SLAB_USBtoUART5
+check and update in the python script, restart the script
+
+
+
+
+Second open SuperCollider:
+
+tangible-devices/__main-entry.scd
+
+Evaluate Code.
+This creates a window.

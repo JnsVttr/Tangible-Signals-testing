@@ -84,7 +84,7 @@ SynthDef(\hh, {
 		doneAction:2);
 	sig = BrownNoise.ar(amp) + PinkNoise.ar(amp) + WhiteNoise.ar(amp/3);
 	sig = HPF.ar(sig, hp);
-	sig = LPF.ar(sig, 10012310000);
+	sig = LPF.ar(sig, 10000);
 	sig = sig * env;
 	Out.ar(out, Pan2.ar(sig, pan));
 }).add;

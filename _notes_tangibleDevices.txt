@@ -1,5 +1,0 @@
-Notes Tangible Devices:
-
-
-Python scripts for the communication with Devices <--> SuperCollider
-
