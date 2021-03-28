@@ -53,14 +53,12 @@
 
 // interactive elements
 ~checkBoxes = Array.fill(5, nil); // array for checkboxes
-~activeTrack = 0;
+
 ~muteChecks = Array.fill(4, nil); // array for checkboxes
 ~volumeKnob = Array.fill(4, nil); // array for checkboxes
 ~bars = Array.fill(8, nil); // array for light
 ~barStates = Array.fill(8, false); // array for light
 ~buttons = Array2D.new(~sequenceRow.size, 8); // array for buttons
-~envs = Array.fill(5, nil); // array for envelopes
-~bpm = 130;
 
 
 

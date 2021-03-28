@@ -86,10 +86,12 @@ OSCdef(\wheelDone, {|msg, time, addr, recvPort|
 	var prevTrack;
 	prevTrack = ~activeTrack - 1;
 	// if (~activeTrack>0, {~setCheckBoxes.value(prevTrack);})
+	"change active track to ".post; ~activeTrack.postln;
 };
 ~buttonFunction[2] = {
 	var nextTrack;
 	nextTrack = ~activeTrack + 1;
+	"change active track to ".post; ~activeTrack.postln;
 	// if (~activeTrack<4, {~setCheckBoxes.value(nextTrack);})
 };
 
@@ -105,7 +107,7 @@ OSCdef(\wheelButton, {|msg, time, addr, recvPort|
 		3, { if (press==0, {~buttonPressed[2] = false;}, {~buttonPressed[2] = true; ~buttonPressedActive[2] = true;});  },
 	);
 	for (0, 2, {|c|
-		if (~buttonPressedActive[c] == true, { ~buttonFunction[c].value; ~buttonPressedActive[c] = false; })
+		if (~buttonPressedActive[c] == true, { ~buttonFunction[c].value; ~buttonPressedActive[c] = false; });
 	});
 
 }, '/button'); // def style
@@ -131,6 +133,16 @@ OSCdef(\wheelButton, {|msg, time, addr, recvPort|
 };
 ~setPushPoints.value();
 
+
+
+
+
+// WHEEL touch
+OSCdef(\touchcheck, {|msg, time, addr, recvPort|
+	msg.postln;
+	("activeTrack:").post; ~activeTrack.postln;
+
+}, '/touch'); // def style
 
 
 

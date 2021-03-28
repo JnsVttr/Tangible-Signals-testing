@@ -22,51 +22,6 @@ To do:
 (
 
 
-// global vars from system
-
-// assign incoming pin/fader to squences
-~pinAssign = 0;
-~faderAssign = 0;
-// fader curve
-~faderCurve = ControlSpec(0, 100, \lin, 1, 1);  // minVal, maxVal, curve, smallest step, default
-
-
-
-// SOUND VARIABLES ========================================================
-
-// 4 collections of steps in sequence
-~durs = Array.fill(4, [0,0,0,0,0,0,0,0]);
-// set each entry to array [0]
-4.do({|c| ~durs[c] = [0,0,0,0,0,0,0,0];  });
-
-
-~envLevels = Array.fill(5, [0,0,0,0,0,0]);
-~envLevels[0] = [0.01, 1, 0.4, 0.004, 0.2, 0.4];
-~envLevels[1] = [0.01, 1, 0.02, 0.004, 0.1, 0.4];
-~envLevels[2] = [0.01, 1, 0.4, 0.004, 0.2, 0.4];
-~envLevels[3] = [0.01, 1, 0.4, 0.004, 0.2, 0.4];
-~envLevels[4] = [0.5, 0.5, 0.5, 0.5, 0.2, 0.4];
-
-~trackVolume = [0.6, 0.2, 0.2, 0.4];
-~trackMutes = [1,1,1,1];  // integers not booleans, because in synthdef used to multiply volume value
-~trackMarker = Array.fill(4, nil);
-
-
-
-// empty functions, will be filled later
-~stopFunction = {};
-~playFunction = {};
-
-
-
-
-
-
-
-
-
-
-
 
 // SYSTEM  START  ==============================
 // Server.killAll;
@@ -106,9 +61,9 @@ s.waitForBoot({
 	("> Synths loaded").postln;
 
 	1.8.wait;
-	// LOAD WINDOW
-	// i.window = thisProcess.nowExecutingPath.dirname +/+ "_window.scd";
-	// i.window.load;
+	// LOAD NO-WINDOW
+	i.noWindow = thisProcess.nowExecutingPath.dirname +/+ "_no_window.scd";
+	i.noWindow.load;
 	s.meter(2, 2);
 	s.plotTree;
 	// ("> Window loaded ").postln;

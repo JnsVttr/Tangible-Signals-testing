@@ -74,7 +74,8 @@ Tdef(\updateLoop, { loop {
 
 	// define what happens, when active track changes
 	if (~prevActiveTrack != ~activeTrack){
-		// ("active track changed via checkboxes to track: " + ~activeTrack).postln;
+		("active track changed via checkboxes to track: " + ~activeTrack).postln;
+
 		// if active track changed to one of the 4 tracks:
 		if (~activeTrack < 4, {
 			~setPins.value(~activeTrack);
