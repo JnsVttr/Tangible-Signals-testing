@@ -85,12 +85,12 @@ OSCdef(\wheelDone, {|msg, time, addr, recvPort|
 ~buttonFunction[1] = {
 	var prevTrack;
 	prevTrack = ~activeTrack - 1;
-	if (~activeTrack>0, {~setCheckBoxes.value(prevTrack);})
+	// if (~activeTrack>0, {~setCheckBoxes.value(prevTrack);})
 };
 ~buttonFunction[2] = {
 	var nextTrack;
 	nextTrack = ~activeTrack + 1;
-	if (~activeTrack<4, {~setCheckBoxes.value(nextTrack);})
+	// if (~activeTrack<4, {~setCheckBoxes.value(nextTrack);})
 };
 
 // Button logic

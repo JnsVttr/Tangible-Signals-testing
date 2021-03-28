@@ -22,7 +22,7 @@ Tdef(\sequencer, { loop {
 	~step = ~step % 8;
 
 	// show steps as colors, I don't know why steps increase more than 7
-	defer {~setBar.value(~step-1);};
+	// defer {~setBar.value(~step-1);};
 
 
 	// play the SYNTHS
@@ -62,13 +62,13 @@ Tdef(\updateLoop, { loop {
 	0.01.wait;
 	~systemCounter = ~systemCounter % 8;
 	// set buttons constantly according to array, which can be changed
-	defer { ~setButtonsAfterDurs.value;  };
+	// defer { ~setButtonsAfterDurs.value;  };
 	// set envelope levels
-	defer { ~setEncLevelsAfterArray.value;  };
+	// defer { ~setEncLevelsAfterArray.value;  };
 	// set master EQ
-	defer { ~setMasterEqualizerAfterArray.value  };
+	// defer { ~setMasterEqualizerAfterArray.value  };
 	// set markers according to active track
-	defer { ~setTrackMarkerAfterArray.value(~activeTrack); };
+	// defer { ~setTrackMarkerAfterArray.value(~activeTrack); };
 	// increase counter
 	~systemCounter = ~systemCounter + 1;
 

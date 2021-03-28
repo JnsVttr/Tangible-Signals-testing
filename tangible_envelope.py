@@ -14,7 +14,7 @@ import re
 osc_startup()
 
 # SERIAL
-ser = serial.Serial('/dev/cu.SLAB_USBtoUART', 115200)
+ser = serial.Serial('/dev/cu.SLAB_USBtoUART11', 115200)
 pattern = str.encode("/fader")
 sleep(1)
 
