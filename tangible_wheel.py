@@ -37,7 +37,7 @@ from osc4py3.oscmethod import * # does OSCARG_XXX
 osc_startup()
 
 # SERIAL
-ser = serial.Serial('/dev/cu.SLAB_USBtoUART6', 115200)
+ser = serial.Serial('/dev/cu.SLAB_USBtoUART', 115200)
 command_wheel = str.encode("/wheel") # command 'wheel'
 
 for _ in range(10):

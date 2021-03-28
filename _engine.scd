@@ -17,7 +17,7 @@
 
 // Sequencer Loop =================================
 Tdef(\sequencer, { loop {
-	0.5.wait;
+	1.wait;
 	// modulo step
 	~step = ~step % 8;
 
@@ -59,7 +59,7 @@ Tdef(\sequencer).isPlaying;
 
 // system TDEF loop
 Tdef(\updateLoop, { loop {
-	0.01.wait;
+	0.5.wait;
 	~systemCounter = ~systemCounter % 8;
 	// set buttons constantly according to array, which can be changed
 	defer { ~setButtonsAfterDurs.value;  };

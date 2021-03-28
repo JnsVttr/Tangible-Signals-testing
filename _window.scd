@@ -60,7 +60,7 @@
 ~barStates = Array.fill(8, false); // array for light
 ~buttons = Array2D.new(~sequenceRow.size, 8); // array for buttons
 ~envs = Array.fill(5, nil); // array for envelopes
-~bpm = 130;
+~bpm = 90;
 
 
 

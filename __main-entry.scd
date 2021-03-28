@@ -21,7 +21,7 @@ To do:
 
 (
 // SYSTEM  START  ==============================
-Server.killAll;
+// Server.killAll;
 s = Server.default;
 s.waitForBoot({
 	// Start screen
@@ -45,7 +45,7 @@ s.waitForBoot({
 	// System vars init
 	// ==================================
 	i = ();
-	TempoClock.default.tempo = (120/30);
+	TempoClock.default.tempo = (100/30);
 	("> init System variables").postln;
 
 
@@ -57,7 +57,7 @@ s.waitForBoot({
 	i.synths.load;
 	("> Synths loaded").postln;
 
-
+	1.wait;
 	// LOAD WINDOW
 	i.window = thisProcess.nowExecutingPath.dirname +/+ "_window.scd";
 	i.window.load;
@@ -65,7 +65,7 @@ s.waitForBoot({
 	s.plotTree;
 	("> Window loaded ").postln;
 
-
+	1.wait;
 	// INIT SYNTHS
 	i.sound = thisProcess.nowExecutingPath.dirname +/+ "_sound.scd";
 	i.sound.load;
