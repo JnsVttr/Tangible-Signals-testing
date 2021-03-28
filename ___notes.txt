@@ -8,6 +8,9 @@ Notes Tangible Devices 2021
 
 
 
+libraries:
+pip -m install pyserial
+pip install osc4py3
 
 
 Python scripts for the communication with Devices <--> SuperCollider
