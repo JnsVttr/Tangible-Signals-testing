@@ -16,7 +16,7 @@ import re
 osc_startup()
 
 # SERIAL
-ser = serial.Serial('/dev/cu.SLAB_USBtoUART13', 115200)
+ser = serial.Serial('/dev/cu.SLAB_USBtoUART18', 115200)
 pattern = str.encode("/pin")
 
 print ("")
